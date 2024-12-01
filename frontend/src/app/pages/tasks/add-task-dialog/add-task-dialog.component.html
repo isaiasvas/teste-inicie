@@ -1,0 +1,9 @@
+<h2>Nova Tarefa</h2>
+<form [formGroup]="taskForm" (ngSubmit)="save()">
+    <mat-form-field>
+        <input matInput placeholder="Título" formControlName="title" />
+        <mat-error *ngIf="taskForm.get('title')?.invalid">O título é obrigatório</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Salvar</button>
+    <button mat-raised-button color="warn" (click)="close()">Cancelar</button>
+</form>

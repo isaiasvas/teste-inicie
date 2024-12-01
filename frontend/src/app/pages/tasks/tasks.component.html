@@ -1,0 +1,69 @@
+<div class="container">
+  <mat-card class="container">
+    <mat-card-header>
+      <mat-card-title>Lista de Tarefas</mat-card-title>
+      <mat-card-subtitle>Crie tarefas e organize suas atividades</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <!-- Lista de tarefas pendentes -->
+      <div class="example-container">
+        <h2>Pendente</h2>
+        <div
+          cdkDropList
+          #todoList="cdkDropList"
+          id="todoList"
+          [cdkDropListData]="todo$.value"
+          [cdkDropListConnectedTo]="['doneList']"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div *ngFor="let task of todo$.value" class="example-box" cdkDrag>
+            {{ task.title }}
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Opções">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item disabled>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item (click)="deleteTask(task)">
+                <mat-icon>delete</mat-icon>
+                <span>Remover</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lista de tarefas concluídas -->
+      <div class="example-container">
+        <h2>Finalizada</h2>
+        <div
+          cdkDropList
+          #doneList="cdkDropList"
+          id="doneList"
+          [cdkDropListData]="done$.value"
+          [cdkDropListConnectedTo]="['todoList']"
+          class="example-list"
+          (cdkDropListDropped)="drop($event)">
+          <div *ngFor="let task of done$.value" class="example-box" cdkDrag>
+            {{ task.title }}
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Opções">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item disabled>
+                <mat-icon>edit</mat-icon>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item (click)="deleteTask(task)">
+                <mat-icon>delete</mat-icon>
+                <span>Remover</span>
+              </button>
+            </mat-menu>
+          </div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

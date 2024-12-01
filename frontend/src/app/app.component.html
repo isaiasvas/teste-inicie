@@ -1,0 +1,31 @@
+
+<mat-sidenav-container class="example-container">
+    <!-- Sidebar -->
+    <mat-sidenav #sidenav mode="side" opened class="sidebar">
+      <mat-nav-list>
+        <mat-list-item (click)="sidenav.close()">Dashboard</mat-list-item>
+        <mat-list-item (click)="sidenav.close()">Tarefas</mat-list-item>
+        <mat-list-item (click)="sidenav.close()">Configurações</mat-list-item>
+      </mat-nav-list>
+    </mat-sidenav>
+  
+    <!-- Main Content -->
+    <mat-sidenav-content>
+      <!-- Header -->
+      <mat-toolbar class="header">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>Lista de Tarefas</span>
+      </mat-toolbar>
+  
+      <!-- Main Content (Card with Tasks) -->
+      <router-outlet />
+  
+    <!-- Footer -->
+    <mat-toolbar class="footer">
+        <span>© 2024 Sua Empresa</span>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

@@ -1,6 +1,6 @@
 # Teste Técnico – Desenvolvedor Laravel & Angular
 Autor: Isaias Vitor de Almeida Silva
-
+contato: isaias@visioit.com.br / 16997505196
 
 # Desafio
 

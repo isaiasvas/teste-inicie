@@ -7,7 +7,7 @@ Clone Repositório
 git clone https://github.com/isaiasvas/teste-inicie.git app-inicie
 ```
 ```sh
-cd app-inicie
+cd app-inicie/app
 ```
 
 Verifique se as portas 8080 8000 3600 esta sendo utilizada antes de continue
@@ -85,7 +85,7 @@ Login usuario (POST)
 
 Criar usuario (POST)
 ```json
-http://127.0.0.1:8000/api/users
+"http://127.0.0.1:8000/api/users"
 {
     {
         "status": true,
@@ -102,7 +102,7 @@ http://127.0.0.1:8000/api/users
 
 Listar Todas as tarefas (GET)
 ```json
-http://127.0.0.1:8000/api/tasks
+"http://127.0.0.1:8000/api/tasks"
 {
     "status": "true | false",
     "tasks": [
@@ -124,7 +124,7 @@ http://127.0.0.1:8000/api/tasks
 
 Visualizar Tarefa (POST)
 ```json
-http://127.0.0.1:8000/api/tasks
+"http://127.0.0.1:8000/api/tasks"
 {
     "status": "true | false",
     "message": "Tarefa criada com sucesso!",
@@ -139,7 +139,7 @@ http://127.0.0.1:8000/api/tasks
 
 Visualizar Tarefa (GET)
 ```json
-http://127.0.0.1:8000/api/tasks/{id}
+"http://127.0.0.1:8000/api/tasks/{id}"
 {
     "status": "true | false",
     "tasks": {
@@ -153,7 +153,7 @@ http://127.0.0.1:8000/api/tasks/{id}
 
 Atualizar Status Tarefa (PUT)
 ```json
-http://127.0.0.1:8000/api/tasks/{id}/status
+"http://127.0.0.1:8000/api/tasks/{id}/status"
 {
     "status": "true | false",
     "message": "Status da tarefa atualizado com sucesso!",
@@ -168,7 +168,7 @@ http://127.0.0.1:8000/api/tasks/{id}/status
 
 Excluir Tarefa (DELETE)
 ```json
-http://127.0.0.1:8000/api/tasks/{id}
+"http://127.0.0.1:8000/api/tasks/{id}"
 {
     "status": "true | false",
     "message": "Tarefa excluída com sucesso!"

@@ -23,16 +23,21 @@ import { DragDropModule } from '@angular/cdk/drag-drop'; // Importação correta
 import {MatMenuModule} from '@angular/material/menu';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { TaskDeleteConfirmationComponent } from './pages/tasks/task-delete-confirmation/task-delete-confirmation.component'; // Ajuste o caminho conforme necessário
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     TasksComponent,  
-    AddTaskDialogComponent, 
+    AddTaskDialogComponent,
+    TaskDeleteConfirmationComponent,
   ],
   imports: [
+    MatSnackBarModule,
+    MatBottomSheetModule,
     MatSidenavModule,
     MatToolbarModule,
     MatMenuModule,

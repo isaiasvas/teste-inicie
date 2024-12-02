@@ -1,8 +1,18 @@
 <div class="container">
-  <mat-card class="container">
+  <mat-card class="card-container">
     <mat-card-header>
-      <mat-card-title>Lista de Tarefas</mat-card-title>
-      <mat-card-subtitle>Crie tarefas e organize suas atividades</mat-card-subtitle>
+      <div class="row">
+        <div class="col-6">
+          <mat-card-title>Lista de Tarefas</mat-card-title>
+          <mat-card-subtitle>Utilize o drag and drop para organizar as tarefas ou use as opções no menu</mat-card-subtitle>
+        </div>
+        <div class="col-6" style="text-align: right">
+          <button mat-raised-button color="primary" (click)="openDialog()">
+            <mat-icon>add</mat-icon>
+            Nova Tarefa
+          </button>
+        </div>
+      </div>
     </mat-card-header>
     <mat-card-content>
       <!-- Lista de tarefas pendentes -->
@@ -22,9 +32,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item disabled>
-                <mat-icon>edit</mat-icon>
-                <span>Editar</span>
+              <button mat-menu-item (click)="updateTaskStatus(task, 'concluída')">
+                <mat-icon>arrow_forward_ios</mat-icon>
+                <span>Finalizada</span>
               </button>
               <button mat-menu-item (click)="deleteTask(task)">
                 <mat-icon>delete</mat-icon>
@@ -52,9 +62,9 @@
               <mat-icon>more_vert</mat-icon>
             </button>
             <mat-menu #menu="matMenu">
-              <button mat-menu-item disabled>
-                <mat-icon>edit</mat-icon>
-                <span>Editar</span>
+              <button mat-menu-item (click)="updateTaskStatus(task, 'pendente')">
+                <mat-icon>arrow_back_ios</mat-icon>
+                <span>Pendente</span>
               </button>
               <button mat-menu-item (click)="deleteTask(task)">
                 <mat-icon>delete</mat-icon>

@@ -1,0 +1,39 @@
+/* Centraliza o conteúdo no meio da tela */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altura da tela inteira */
+    background: url('/todo-login.jpg') no-repeat top left fixed;
+    background-size: cover; /* Ajusta a imagem para cobrir o fundo */
+  }
+  
+  /* Estiliza o card */
+  .login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center;
+  }
+  
+  /* Espaçamento entre os campos */
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Espaço entre os campos */
+  }
+  
+  /* Estiliza os campos de entrada */
+  .form-field {
+    width: 100%;
+  }
+  
+  /* Botão estilizado */
+  .login-button {
+    width: 100%;
+    padding: 0.75rem;
+  }
+  

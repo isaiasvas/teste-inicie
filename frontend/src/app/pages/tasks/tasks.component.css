@@ -1,71 +1,89 @@
-/* Estiliza o container principal */
 .container {
+  margin: 3em 0;
   padding: 3em;
-  display: flex; /* Flexível para alinhamento */
-  flex-direction: column; /* Elementos empilhados verticalmente */
-  align-items: flex-start; /* Alinhamento à esquerda */
+  display: flex;
+  flex-direction: column; /* Estrutura principal vertical */
+  align-items: center;
+  justify-content: center;
+  background-color: aliceblue;
 }
 
-/* Faz o card ajustar-se ao conteúdo */
-mat-card.container {
-  display: inline-block; /* Ajusta a largura ao conteúdo */
-  width: auto; /* Remove restrições de largura */
-  padding: 1rem; /* Margem interna para espaçamento */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve */
+.card-container {
+  width: 100%;
+  max-width: 800px; /* Limite máximo de largura */
+  padding: 2em;
+  display: flex;
+  flex-direction: column; /* Elementos internos organizados verticalmente */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+mat-card-header .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Espaçamento automático entre colunas */
+  align-items: center; /* Centraliza os itens verticalmente */
+  width: 100%;
+}
+
+mat-card-header .row .col-6 {
+  flex: 1; /* Cada coluna ocupa o espaço proporcional disponível */
+  text-align: left; /* Centraliza o conteúdo */
+  padding: 0 1em;
+}
+
+mat-card-content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os itens se empilhem em telas menores */
+  justify-content: space-between; /* Distribui as listas uniformemente */
+  gap: 1.5em; /* Espaçamento entre as listas */
 }
 
 .example-container {
-    width: 400px;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  .example-list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    overflow: hidden;
-    display: block;
-  }
-  
-  .example-box {
-    padding: 20px 10px;
-    border-bottom: solid 1px #ccc;
-    color: rgba(0, 0, 0, 0.87);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    cursor: move;
-    background: white;
-    font-size: 14px;
-  }
-  
-  .cdk-drag-preview {
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-                0 8px 10px 1px rgba(0, 0, 0, 0.14),
-                0 3px 14px 2px rgba(0, 0, 0, 0.12);
-  }
-  
-  .cdk-drag-placeholder {
-    opacity: 0;
-  }
-  
-  .cdk-drag-animating {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
-  
-  .example-box:last-child {
-    border: none;
-  }
-  
-  .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-    transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
-  }
-  
+  flex: 1 1 calc(50% - 1.5em); /* Ocupa 50% da largura menos o gap */
+  min-width: 300px; /* Largura mínima para evitar itens muito pequenos */
+
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.example-list {
+  display: flex;
+  flex-direction: column; /* Organiza tarefas verticalmente */
+  gap: 0.5em; /* Espaçamento entre as tarefas */
+  min-height: 60px; /* Altura mínima */
+  background: white;
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.example-box {
+  display: flex;
+  justify-content: space-between; /* Alinha os elementos horizontalmente */
+  align-items: center; /* Centraliza os elementos verticalmente */
+  padding: 10px;
+  background: white;
+  border-bottom: solid 1px #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  cursor: grab;
+}
+
+.example-box:last-child {
+  border-bottom: none; /* Remove a borda do último item */
+}
+
+.cdk-drag-preview {
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.cdk-drag-placeholder {
+  opacity: 0; /* Placeholder invisível durante a movimentação */
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}

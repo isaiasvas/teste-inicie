@@ -1,150 +1,15 @@
-/* Resetando margens e padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+.example-spacer {
+    flex: 1 1 auto;
   }
-  
-  /* Container principal (com flex) */
-  .example-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh; /* Ocupa toda a altura da tela */
-  }
-  
-  /* Sidebar (Menu lateral) */
-  .sidebar {
-    width: 250px;
-    background-color: #2c3e50;
-    color: #fff;
-    position: fixed; /* Fica fixo no lado esquerdo */
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 20px;
-    transition: all 0.3s ease;
-  }
-  
-  .sidebar mat-nav-list {
-    padding: 0;
-  }
-  
-  .sidebar mat-list-item {
-    color: #ecf0f1;
-    padding: 15px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .sidebar mat-list-item:hover {
-    background-color: #34495e;
-  }
-  
-  /* Área de conteúdo principal */
-  mat-sidenav-content {
-    margin-left: 250px; /* Desloca o conteúdo para a direita da sidebar */
-    padding: 20px;
-    flex: 1; /* Faz o conteúdo ocupar o restante da tela */
-    background-color: #ecf0f1;
-    overflow-y: auto; /* Se o conteúdo for muito longo, vai rolar */
-  }
-  
-  /* Header (Barra superior) */
-  .header {
-    background-color: #34495e;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
+
+  mat-toolbar {
+    background-color: aliceblue;
+    color: black;
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 100;
+    right: 0;
+    z-index: 99;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    margin-bottom: 1em;
   }
-  
-  .header span {
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  .header mat-icon-button {
-    color: #fff;
-  }
-  
-  /* Footer (Rodapé) */
-  .footer {
-    background-color: #34495e;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-  }
-  
-  /* Conteúdo do Card */
-  mat-card.container {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    margin-top: 70px; /* Evita que o conteúdo fique atrás do header */
-    padding: 20px;
-  }
-  
-  .example-container h2 {
-    font-size: 18px;
-    color: #2c3e50;
-    margin-bottom: 10px;
-  }
-  
-  .example-list {
-    border: solid 1px #ccc;
-    min-height: 60px;
-    background: white;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    padding: 10px;
-  }
-  
-  .example-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border-bottom: solid 1px #ccc;
-    background-color: #fff;
-  }
-  
-  .example-box:last-child {
-    border-bottom: none;
-  }
-  
-  /* Responsividade - Ajusta o layout em telas menores */
-  @media (max-width: 768px) {
-    .sidebar {
-      width: 100%; /* Sidebar ocupa a tela inteira em dispositivos móveis */
-      height: auto;
-      position: relative;
-      transition: none;
-    }
-  
-    .header {
-      padding: 10px;
-    }
-  
-    .example-container {
-      margin-left: 0; /* Remove o espaço da sidebar */
-    }
-  
-    mat-sidenav-content {
-      margin-left: 0;
-      padding: 10px;
-    }
-  }
-  

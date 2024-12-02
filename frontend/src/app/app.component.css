@@ -1,15 +1,23 @@
+/* Estilo da toolbar */
+mat-toolbar {
+  background-color: aliceblue;
+  color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 56px; /* Altura padrão do mat-toolbar */
+}
 
+/* Spacer para o conteúdo */
 .example-spacer {
-    flex: 1 1 auto;
-  }
+  flex: 1 1 auto;
+}
 
-  mat-toolbar {
-    background-color: aliceblue;
-    color: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+

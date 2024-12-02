@@ -33,8 +33,16 @@ ng serve
 
 Depois que o servidor estiver rodando, abra o seu navegador e acesse http://localhost:4200/. A aplicação será recarregada automaticamente sempre que você modificar algum dos arquivos de origem.
 
+# Usuario Padrão para uso
+```bash
+admin@example.com
+123456a
+```
+
+
 (OPCIONAL) Para construir o projeto, execute
 
 ```bash
 ng build
 ```
+

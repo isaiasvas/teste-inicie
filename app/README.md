@@ -68,7 +68,7 @@ admin@example.com
 
 Login usuario (POST)
 ```json
-http://127.0.0.1:8000/api/login
+"http://127.0.0.1:8000/api/login"
 {
     {
         "status": true,
@@ -82,8 +82,6 @@ http://127.0.0.1:8000/api/login
 
 }
 ```
-
-
 
 Criar usuario (POST)
 ```json
@@ -102,26 +100,23 @@ http://127.0.0.1:8000/api/users
 }
 ```
 
-
-
-
 Listar Todas as tarefas (GET)
 ```json
 http://127.0.0.1:8000/api/tasks
 {
-    "status": true | false,
+    "status": "true | false",
     "tasks": [
         {
-            "id": id,
+            "id": "id",
             "title": "title",
             "status": "pendente | concluída",
-            "completed_at": null | now
+            "completed_at": "null | now"
         },
         {
-            "id": id,
+            "id": "id",
             "title": "title",
             "status": "pendente | concluída",
-            "completed_at": null | now
+            "completed_at": "null | now"
         },
     ]
 }
@@ -131,13 +126,13 @@ Visualizar Tarefa (POST)
 ```json
 http://127.0.0.1:8000/api/tasks
 {
-    "status": true | false,
+    "status": "true | false",
     "message": "Tarefa criada com sucesso!",
     "tasks": {
-        "id": id,
+        "id": "id",
         "title": "title",
         "status": "pendente | concluída",
-        "completed_at": null | now
+        "completed_at": "null | now"
     }
 }
 ```
@@ -146,12 +141,12 @@ Visualizar Tarefa (GET)
 ```json
 http://127.0.0.1:8000/api/tasks/{id}
 {
-    "status": true | false,
+    "status": "true | false",
     "tasks": {
-        "id": id,
+        "id": "id",
         "title": "title",
         "status": "pendente | concluída",
-        "completed_at": null | now
+        "completed_at": "null | now"
     }
 }
 ```
@@ -160,13 +155,13 @@ Atualizar Status Tarefa (PUT)
 ```json
 http://127.0.0.1:8000/api/tasks/{id}/status
 {
-    "status": true | false,
+    "status": "true | false",
     "message": "Status da tarefa atualizado com sucesso!",
     "tasks": {
-        "id": id,
+        "id": "id",
         "title": "title"
         "status": "pendente | concluída",
-        "completed_at": null | now
+        "completed_at": "null | now"
     }
 }
 ```
@@ -175,10 +170,7 @@ Excluir Tarefa (DELETE)
 ```json
 http://127.0.0.1:8000/api/tasks/{id}
 {
-    "status": true | false,
+    "status": "true | false",
     "message": "Tarefa excluída com sucesso!"
 }
 ```
-
-
-[http://localhost:8000](http://localhost:8000)

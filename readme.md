@@ -16,3 +16,7 @@ Acesse a pasta app para instalar o Laravel
 Em seguida, Acesse a pasta frontend para instalar o Angular
 
 OBS: leia o readme para não ter erro de instalação
+
+# Usuario padrão do sistema
+admin@example.com
+123456a
